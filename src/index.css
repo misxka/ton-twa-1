@@ -54,7 +54,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --tg-theme-bg-color: #131415;
+    --tg-theme-bg-color: #232424;
     --tg-theme-text-color: #fff;
     --tg-theme-button-color: #32a6fb;
     --tg-theme-button-text-color: #fff;
