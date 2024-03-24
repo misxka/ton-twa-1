@@ -2,7 +2,7 @@ import { Address, beginCell, Cell, Contract, contractAddress, ContractProvider, 
 
 export type CounterConfig = object;
 
-export function counterConfigToCell(config: CounterConfig): Cell {
+export function counterConfigToCell(): Cell {
   return beginCell().endCell();
 }
 
@@ -16,8 +16,8 @@ export class Counter implements Contract {
     return new Counter(address);
   }
 
-  static createFromConfig(config: CounterConfig, code: Cell, workchain = 0) {
-    const data = counterConfigToCell(config);
+  static createFromConfig(_config: CounterConfig, code: Cell, workchain = 0) {
+    const data = counterConfigToCell();
     const init = { code, data };
     return new Counter(contractAddress(workchain, init), init);
   }
